@@ -181,7 +181,7 @@ func (req *request) Transport() string {
 		}
 	}
 
-	if tp == "UDP" && len(req.String()) > int(MTU)-200 {
+	if tp == "UDP" && len(req.String()) > int(MTU)-40 {
 		tp = "TCP"
 	}
 
